@@ -48,9 +48,7 @@ var1,var2,var3\n
 and the result will be as shown in the image below   
   
 <img src="/imgs/plotter.png" width="500">
-##Download  
-**Available versions**   
-[**SerialLabSetupV1.0.0.exe**](/versions/SerialLabSetupV1.0.0.exe)
+
 ##Author 
 **Ahmed El-Sayed**  
 [**ahmed.elsayed93@eng-st.cu.edu.eg**](mailto:ahmed.elsayed93@eng-st.cu.edu.eg)  
