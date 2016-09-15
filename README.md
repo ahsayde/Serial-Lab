@@ -47,8 +47,11 @@ var1,var2,var3\n
 ```
 and the result will be as shown in the image below   
   
-<img src="/imgs/plotter.png" width="500">
+<img src="/imgs/plotter.png" width="500">  
 
+##Download  
+Available versions  
+[**SerialLabSetupV1.0.0.msi**](https://github.com/ahmedelsayed93/Serial-Lab/raw/master/versions/SerialLabSetupV1.0.0.msi)
 ##Author 
 **Ahmed El-Sayed**  
 [**ahmed.elsayed93@eng-st.cu.edu.eg**](mailto:ahmed.elsayed93@eng-st.cu.edu.eg)  
