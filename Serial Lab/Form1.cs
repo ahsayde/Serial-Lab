@@ -47,7 +47,6 @@ namespace Seriallab
             databitsConfig.DataSource = new[] { "5", "6", "7", "8" };
             stopbitsConfig.DataSource = new[] { "1", "2", "1.5" };
             flowcontrolConfig.DataSource = new[] { "None", "RTS", "RTS/X", "Xon/Xoff" };
-            portConfig.SelectedIndex = 0;
             baudrateConfig.SelectedIndex = 5;
             parityConfig.SelectedIndex = 0;
             databitsConfig.SelectedIndex = 3;
