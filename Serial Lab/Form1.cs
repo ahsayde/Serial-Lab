@@ -25,7 +25,7 @@ namespace Seriallab
 {
     public partial class MainForm : Form
     {
-        public string data = "";
+        public string data{ get; set; }
         int graph_scaler = 500;
         int send_repeat_counter = 0;
         bool send_data_flag = false;
@@ -41,12 +41,13 @@ namespace Seriallab
 
         public void configrations()
         {
-            portConfig.Items.AddRange(SerialPort.GetPortNames());
+           portConfig.Items.AddRange(SerialPort.GetPortNames());
             baudrateConfig.DataSource = new[] { "115200", "19200", "230400", "57600", "38400", "9600", "4800" };
             parityConfig.DataSource = new[] { "None", "Odd", "Even", "Mark", "Space" };
             databitsConfig.DataSource = new[] { "5", "6", "7", "8" };
             stopbitsConfig.DataSource = new[] { "1", "2", "1.5" };
             flowcontrolConfig.DataSource = new[] { "None", "RTS", "RTS/X", "Xon/Xoff" };
+            //portConfig.SelectedIndex = 0;
             baudrateConfig.SelectedIndex = 5;
             parityConfig.SelectedIndex = 0;
             databitsConfig.SelectedIndex = 3;
@@ -70,31 +71,33 @@ namespace Seriallab
             /*Connect*/
             if (!mySerial.IsOpen)
             {
-                Serial_port_config();
-                try
-                {
-                    mySerial.Open();  
-                }
-                catch
-                {
-                    alert("Can't open " + mySerial.PortName + " port, it might be used in another program");
-                    return;
-                }
-
-                if (datalogger_checkbox.Checked)
+                if (Serial_port_config())
                 {
                     try
                     {
-                        out_file = new System.IO.StreamWriter(datalogger_checkbox.Text, datalogger_append_radiobutton.Checked);
+                        mySerial.Open();
                     }
                     catch
                     {
-                        alert("Can't open " + datalogger_checkbox.Text + " file, it might be used in another program");
+                        alert("Can't open " + mySerial.PortName + " port, it might be used in another program");
                         return;
                     }
-                }
 
-                UserControl_state(true);
+                    if (datalogger_checkbox.Checked)
+                    {
+                        try
+                        {
+                            out_file = new System.IO.StreamWriter(datalogger_checkbox.Text, datalogger_append_radiobutton.Checked);
+                        }
+                        catch
+                        {
+                            alert("Can't open " + datalogger_checkbox.Text + " file, it might be used in another program");
+                            return;
+                        }
+                    }
+
+                    UserControl_state(true);
+                }
             }
 
             /*Disconnect*/
@@ -466,14 +469,17 @@ namespace Seriallab
 
         /*Application-----*/
         /*serial port config*/
-        private void Serial_port_config()
+        private bool Serial_port_config()
         {
-            mySerial.PortName = portConfig.Text;
+            try {mySerial.PortName = portConfig.Text; }
+            catch { alert("There are no available ports"); return false;}
             mySerial.BaudRate = (Int32.Parse(baudrateConfig.Text));
             mySerial.StopBits = (StopBits)Enum.Parse(typeof(StopBits), (stopbitsConfig.SelectedIndex + 1).ToString(), true);
             mySerial.Parity = (Parity)Enum.Parse(typeof(Parity), parityConfig.SelectedIndex.ToString(), true);
             mySerial.DataBits = (Int32.Parse(databitsConfig.Text));
             mySerial.Handshake = (Handshake)Enum.Parse(typeof(Handshake), flowcontrolConfig.SelectedIndex.ToString(), true);
+
+            return true;
         }
 
         private void UserControl_state(bool value)
