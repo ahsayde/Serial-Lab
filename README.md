@@ -54,7 +54,7 @@ and the result will be as shown in the image below
 
 ##Download  
 Available versions  
-[**SerialLabSetupV1.0.0.msi**](https://github.com/ahmedelsayed93/Serial-Lab/raw/master/versions/SerialLabSetupV1.0.0.msi)
+[**SerialLabSetupV1.0.0.msi**](https://github.com/ahmedelsayed93/Serial-Lab/raw/master/SerialLabSetupV1.0.0.msi)
 ##Author 
 **Ahmed El-Sayed**  
 [**ahmed.elsayed93@eng-st.cu.edu.eg**](mailto:ahmed.elsayed93@eng-st.cu.edu.eg)  
