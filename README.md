@@ -1,11 +1,14 @@
 <img src="/imgs/logo.png" width="290">  
 ----  
 
- **SerialLab** is a Windows application (Written in C#) that **reads**, **writes** and **plots** data from/to serial port.  
+ **Serial Lab** is a Windows application (Written in C#) that **reads**, **writes** and **plots** data from/to serial port.  
  
   
  <img src="/imgs/sc3.png" width="430">
-   
+ 
+## Youtube  
+ 
+ [https://www.youtube.com/watch?v=Y9CP6luC7eBs](https://www.youtube.com/watch?v=Y9CP6luC7eBs)
    
 ##Features
 * Read and write data to serial ports even under high traffic load without freezing.
