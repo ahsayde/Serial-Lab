@@ -57,7 +57,7 @@ Available versions
 [**SerialLabSetupV1.0.0.msi**](https://github.com/ahmedelsayed93/Serial-Lab/raw/master/SerialLabSetupV1.0.0.msi)
 ##Author 
 **Ahmed El-Sayed**  
-[**ahmed.elsayed93@eng-st.cu.edu.eg**](mailto:ahmed.elsayed93@eng-st.cu.edu.eg)  
+[**ahmed.elsayed93@gmail.com**](mailto:ahmed.elsayed93@gmail.com)  
 ##License
 Licensed under the **GNU GPLv3**  
 **Icon** is designed by [**Freepik**](www.freepik.com) from [**Flaticon**](www.flaticon.com)
