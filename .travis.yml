@@ -1,0 +1,15 @@
+language: python
+sudo: true
+dist: trusty
+
+pyhon:
+  - 3.5.2
+
+before_install:
+  - sudo apt-get -qq update
+
+install:
+  - sleep 20
+
+script:
+  - ls
