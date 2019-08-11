@@ -60,4 +60,4 @@ Available versions
 [**ahmed.m.elsayed93@gmail.com**](mailto:ahmed.m.elsayed93@gmail.com)  
 ## License
 Licensed under the **GNU GPLv3**  
-**Icon** is designed by [**Freepik**](www.freepik.com) from [**Flaticon**](www.flaticon.com)
+**Icon** is designed by [**Freepik**](http://www.freepik.com) from [**Flaticon**](http://www.flaticon.com)
